@@ -18,7 +18,7 @@ import fs from 'fs'
            localpath, {
                resource_type: 'auto',
            })
-          fs.unlinkSync(localpath) 
+      //    fs.unlinkSync(localpath) 
         console.log("file uploaded",uploadResult.url)
        return response
         }
