@@ -1,6 +1,4 @@
 import { v2 as cloudinary } from 'cloudinary';
-import { error } from 'console';
-import { response } from 'express';
 import fs from 'fs'
 
 
@@ -18,9 +16,9 @@ import fs from 'fs'
            localpath, {
                resource_type: 'auto',
            })
-      //    fs.unlinkSync(localpath) 
-        console.log("file uploaded",uploadResult.url)
-       return response
+         fs.unlinkSync(localpath) 
+      //  console.log("file uploaded",uploadResult.url)
+       return uploadResult
         }
         catch(error){
             fs.unlinkSync(localpath) //remove local saved temp file   
